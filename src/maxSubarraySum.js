@@ -1,6 +1,6 @@
 /**
  * Compute the max sum of a given subarray length using:
- * "Sliding Window" Tc:O(n) Sc:O(1)
+ * "Sliding Window" Time:O(n) Space:O(1)
  * 
  * @param {Array}     a the array to parse 
  * @param {Number}    n length of the sub array

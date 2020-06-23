@@ -1,6 +1,6 @@
 const maxSubarraySum = require('../maxSubarraySum.js');
 
-describe('Compute the max sum of a given subarray length using: "Sliding Window" Tc:O(n) Sc:O(1)', () => {
+describe('Compute the max sum of a given subarray length using: "Sliding Window" Time:O(n) Space:O(1)', () => {
   test('[100,200,300,400], 2 : [300,400]=700', () => {
     expect(maxSubarraySum([100,200,300,400], 2)).toBe(700);
   });
