@@ -12,4 +12,8 @@ describe('Check if any duplicates among the arguments passed in: "Frequency Coun
   test('a, b, c, a : true', () => {
     expect(areThereDuplicates('a', 'b', 'c', 'a')).toBeTruthy();
   });
+
+  test('false', () => {
+    expect(areThereDuplicates()).toBeFalsy();
+  });
 });
