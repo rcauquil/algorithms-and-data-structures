@@ -1,6 +1,6 @@
 const findLongestSubstring = require('../findLongestSubstring.js');
 
-describe('Return the length of longest substring with all distinct chars: "Sliding Window" Time:O(n) Space:O(1)', () => {
+describe('Return the length of longest substring with all distinct chars: "Sliding Window" Time:O(n) Space:O(n)', () => {
   test('Empty string : 0', () => {
     expect(findLongestSubstring('')).toBe(0);
   });
