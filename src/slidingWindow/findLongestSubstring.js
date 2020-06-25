@@ -7,20 +7,19 @@
  */
 function findLongestSubstring(str) {
   let start = 0;
+  let seenAt = {};
   let longest = 0;
-  let indexes = {};
  
   for (let i = 0; i < str.length; i++) {
     // Vars
-    let currChar = str[i];
-    let nextChar = indexes[currChar] + 1 || 0; // 0 for first loop as indexes is not set yet
-    // Replace start by nextChar if > than current start.
-    // We are doing this to avoid double count
-    start = Math.max(start, nextChar);
+    let char = str[i];
+    if (seenAt[char]) {
+      start = Math.max(start, seenAt[char]);
+    }
     // Current index - start + 1 (to include current in count)
     longest = Math.max(longest, i - start + 1);    
-    // Set current char index
-    indexes[currChar] = i;
+    // Store the index of the next char to avoid double count
+    seenAt[char] = i + 1;
   }
   return longest;
 }
