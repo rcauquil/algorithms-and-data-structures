@@ -14,7 +14,8 @@ function findLongestSubstring(str) {
     // Vars
     let currChar = str[i];
     let nextChar = indexes[currChar] + 1 || 0; // 0 for first loop as indexes is not set yet
-    // Next char to avoid double count
+    // Replace start by nextChar if > than current start.
+    // We are doing this to avoid double count
     start = Math.max(start, nextChar);
     // Current index - start + 1 (to include current in count)
     longest = Math.max(longest, i - start + 1);    
