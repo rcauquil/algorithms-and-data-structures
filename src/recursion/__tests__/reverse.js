@@ -1,19 +1,15 @@
 const reverse = require('../reverse.js');
 
 describe('Return a reversed string', () => {
-  test('120 : null', () => {
-    expect(reverse(120)).toBe(null);
-  });
-
-  test(' : ', () => {
-    expect(reverse('')).toBe('');
-  });
-  
-  test('awesome : emosewa', () => {
-    expect(reverse('awesome')).toBe('emosewa');
-  });
-
-  test('rithmschool : loohcsmhtir', () => {
-    expect(reverse('rithmschool')).toBe('loohcsmhtir');
-  });
+  test.each([
+    [{}, null],
+    [[], null],
+    [120, null],
+    ['', ''],
+    ['awesome', 'emosewa'],
+    ['rithmschool', 'loohcsmhtir']
+  ])(
+    '%p : %p',
+    (a, r) => expect(reverse(a)).toBe(r)
+  );
 });

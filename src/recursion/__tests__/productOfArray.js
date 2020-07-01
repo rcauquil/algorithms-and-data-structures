@@ -1,19 +1,15 @@
 const productOfArray = require('../productOfArray.js');
 
 describe('Return the product of all the numbers in a given array', () => {
-  test('[] : 0', () => {
-    expect(productOfArray([])).toBe(0);
-  });
-
-  test('[6] : 0', () => {
-    expect(productOfArray([6])).toBe(6);
-  });
-
-  test('[1,2,3] : 6', () => {
-    expect(productOfArray([1,2,3])).toBe(6);
-  });
-
-  test('[1,2,3,10] : 60', () => {
-    expect(productOfArray([1,2,3,10])).toBe(60);
-  });
+  test.each([
+    [{}, 0],
+    [[], 0],
+    ['abc', 0],
+    [[6], 6],
+    [[1,2,3], 6],
+    [[1,2,3,10], 60]
+  ])(
+    '%p : %i',
+    (a, r) => expect(productOfArray(a)).toBe(r)
+  );
 });

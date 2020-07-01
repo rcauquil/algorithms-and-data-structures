@@ -5,6 +5,7 @@
  * @returns {number}
  */
 function productOfArray(a) {
+  if (!Array.isArray(a)) return 0;
   if (a.length <= 1) return a[0] || 0;
   return a[0] * productOfArray(a.slice(1));
 }
