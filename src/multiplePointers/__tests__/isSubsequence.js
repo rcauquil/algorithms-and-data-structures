@@ -11,7 +11,7 @@ describe('Check if chars in first strings form a subsequence of chars in second 
     ['abc', 'acb', false],
     ['foo', null, false]
   ])(
-    '%p : %p',
+    '%p, %p : %p',
     (a, b, r) => expect(isSubsequence(a,b)).toBe(r)
   );
 });
