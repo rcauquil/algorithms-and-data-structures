@@ -7,6 +7,7 @@
  * @returns {Boolean}
  */
 function averagePair(a, n){
+  if (!Array.isArray(a)) return false;
   let start = 0;
   let end = a.length - 1;
   
